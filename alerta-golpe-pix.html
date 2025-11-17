@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Golpe do Pix - CiberCrimes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- NAVBAR: cole aqui a navbar do Passo 1 -->
+
+  <div class="container py-5">
+    <h1>Golpe do Pix no WhatsApp</h1>
+    <p class="lead">Resumo curto.</p>
+
+    <img src="img/golpe-pix.jpg" class="img-fluid mb-4" alt="Golpe do Pix">
+
+    <section>
+      <h2>Como funciona</h2>
+      <p>Coloque aqui o texto completo explicando o golpe, exemplos e instruções.</p>
+
+      <h2>Como se proteger</h2>
+      <ul>
+        <li>Não compartilhe códigos.</li>
+        <li>Confirme por outra via com a pessoa.</li>
+        <li>Use autenticação em dois fatores.</li>
+      </ul>
+    </section>
+
+    <!-- BOTOES DE COMPARTILHAR -->
+    <div class="mt-4">
+      <button class="btn btn-outline-primary me-2" id="btn-share-native">Compartilhar</button>
+      <a href="#" id="wa-share" class="btn btn-success me-2">WhatsApp</a>
+      <a href="#" id="linkedin-share" class="btn btn-primary">LinkedIn</a>
+    </div>
+
+    <a href="index.html" class="btn btn-outline-secondary mt-4">Voltar</a>
+  </div>
+
+  <script>
+    // Dados para compartilhar
+    const pageTitle = document.title;
+    const pageURL = window.location.href;
+
+    // Web Share API (navegadores que suportam)
+    document.getElementById('btn-share-native').addEventListener('click', async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: pageTitle, text: 'Leia este alerta:', url: pageURL });
+        } catch (err) {
+          // usuário cancelou ou erro
+          alert('Não foi possível abrir o compartilhamento nativo.');
+        }
+      } else {
+        alert('Compartilhamento nativo não suportado no seu navegador. Use os botões de WhatsApp/LinkedIn.');
+      }
+    });
+
+    // WhatsApp (fallback): abre conversa com texto
+    const waText = encodeURIComponent(pageTitle + ' - ' + pageURL);
+    document.getElementById('wa-share').setAttribute('href', 'https://api.whatsapp.com/send?text=' + waText);
+    document.getElementById('wa-share').setAttribute('target','_blank');
+
+    // LinkedIn share
+    const liURL = encodeURIComponent(pageURL);
+    document.getElementById('linkedin-share').setAttribute('href', 'https://www.linkedin.com/sharing/share-offsite/?url=' + liURL);
+    document.getElementById('linkedin-share').setAttribute('target','_blank');
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

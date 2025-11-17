@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site no GitHub Pages</title>
-    </head>
-<body>
-    <h1>Olá, Mundo do GitHub Pages!</h1>
-    <p>Este site foi publicado usando o GitHub Pages.</p>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CiberCrimes - Início</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- NAVBAR: cole aqui a navbar do Passo 1 -->
+  <!-- (Cole a navbar do Passo 1 exatamente aqui) -->
+   <!-- NAVBAR: cole isto no lugar da navbar atual em TODOS os arquivos -->
+    <nav class="navbar navbar-dark bg-dark">
+  <div class="container d-flex justify-content-between align-items-center">
+    
+    <!-- Lado esquerdo -->
+    <a class="navbar-brand fw-bold" href="index.html">CiberCrimes</a>
+
+    <!-- Lado direito -->
+    <div class="d-flex align-items-center">
+
+      <!-- Instagram -->
+      <a class="nav-link text-white me-3" id="navbar-instagram" href="#" target="_blank">
+        Instagram
+      </a>
+
+      <!-- LinkedIn -->
+      <a class="nav-link text-white me-3" id="navbar-linkedin" href="#" target="_blank">
+        LinkedIn
+      </a>
+
+      <!-- Compartilhar -->
+      <button class="btn btn-outline-light btn-sm" id="btn-share-top">Compartilhar</button>
+
+    </div>
+  </div>
+</nav>
+
+<!-- NAVBAR CINZA -->
+<nav class="navbar navbar-light" style="background-color: #e4e4e4;">
+  <div class="container d-flex justify-content-center">
+
+    <ul class="navbar-nav flex-row">
+
+      <li class="nav-item mx-3">
+        <a class="nav-link" href="index.html">Início</a>
+      </li>
+
+      <li class="nav-item mx-3">
+        <a class="nav-link" href="boas-praticas.html">Boas Práticas</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="sobre.html"> Sobre</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Alertas e Notícias</h1>
+
+    <!-- NOTÍCIA 1 -->
+    <article class="card mb-4 shadow-sm">
+      <img src="img/golpe-pix.jpg" class="card-img-top" alt="Golpe do Pix">
+      <div class="card-body">
+        <h2 class="card-title h5">Golpe do Pix no WhatsApp</h2>
+        <p class="card-text">
+          Criminosos se passam por familiares e pedem Pix urgente usando números clonados.
+          Veja sinais claros para identificar essa tentativa de fraude.
+        </p>
+        <a href="alerta-golpe-pix.html" class="btn btn-dark">Ler mais</a>
+      </div>
+    </article>
+
+    <!-- NOTÍCIA 2 -->
+    <article class="card mb-4 shadow-sm">
+      <img src="img/falso-suporte.jpg" class="card-img-top" alt="Falso suporte Telegram">
+      <div class="card-body">
+        <h2 class="card-title h5">Falso Suporte do Telegram</h2>
+        <p class="card-text">
+          Perfis falsos entram em contato dizendo que sua conta está em risco e solicitam códigos.
+        </p>
+        <a href="alerta-falso-suporte.html" class="btn btn-dark">Ler mais</a>
+      </div>
+    </article>
+
+    <!-- NOTÍCIA 3 -->
+    <article class="card mb-4 shadow-sm">
+      <img src="img/falso-rastreamento.jpg" class="card-img-top" alt="Falso rastreamento">
+      <div class="card-body">
+        <h2 class="card-title h5">Golpe do Falso Rastreamento</h2>
+        <p class="card-text">
+          Mensagens informam que há uma encomenda “pendente” e enviam para páginas falsas que roubam dados.
+        </p>
+        <a href="alerta-falso-rastreamento.html" class="btn btn-dark">Ler mais</a>
+      </div>
+    </article>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
