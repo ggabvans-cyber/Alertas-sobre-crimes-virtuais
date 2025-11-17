@@ -9,34 +9,42 @@
     
     <style>
         /* Cor de Fundo da NavBar: #0b0037 */
-        .navbar-custom {
+        .navbar-custom, .offcanvas-custom {
             background-color: #0b0037 !important;
         }
 
-        /* Estilo dos Cards de Ícones (inspirado na imagem) */
+        /* Container único para os cards */
+        .cards-container {
+            border: 1px solid #dee2e6; /* Borda cinza clara para o retângulo */
+            border-radius: 8px;
+            padding: 30px 15px; /* Espaçamento interno */
+        }
+
+        /* Estilo dos Cards de Ícones (Removendo o vermelho, usando cinza claro) */
         .icon-box {
             text-align: center;
             padding: 20px;
-            border: 1px solid #dc3545; /* Vermelho Bootstrap */
+            border: 1px solid #f8f9fa; /* Borda cinza muito clara (quase branca) */
             border-radius: 5px;
             transition: all 0.3s;
-            height: 100%; /* Garante que os boxes tenham a mesma altura */
+            height: 100%; 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: #f8f9fa; /* Cinza claro como fundo */
         }
         .icon-box i {
-            color: #dc3545; /* Cor do ícone */
+            color: #495057; /* Cinza escuro para o ícone */
             font-size: 3rem;
             margin-bottom: 15px;
         }
         .icon-box:hover {
-            background-color: #dc3545;
-            color: white !important; /* Cor do texto ao passar o mouse */
+            background-color: #e9ecef; /* Cinza levemente mais escuro no hover */
+            color: #212529 !important; 
         }
         .icon-box:hover i {
-            color: white;
+            color: #212529;
         }
     </style>
 </head>
@@ -44,18 +52,15 @@
 
 <nav class="navbar navbar-dark navbar-custom">
     <div class="container d-flex justify-content-between align-items-center">
-
         <a class="navbar-brand fw-bold" href="index.html">CiberInfos</a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </nav>
 
-<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+<div class="offcanvas offcanvas-end text-bg-dark offcanvas-custom" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu CiberInfos</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -71,52 +76,64 @@
                 <a class="nav-link" href="sobre.html">Sobre</a>
             </li>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Compartilhar
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#" id="offcanvas-instagram" target="_blank">Instagram</a></li>
-                    <li><a class="dropdown-item" href="#" id="offcanvas-linkedin" target="_blank">LinkedIn</a></li>
-                    <li><button class="dropdown-item" id="offcanvas-share-link">Copiar Link do Site</button></li>
-                </ul>
+            <li class="nav-item">
+                <button class="btn btn-outline-light nav-link" id="offcanvas-share-link">Compartilhar</button>
             </li>
         </ul>
     </div>
 </div>
 <div class="container py-5">
-    <h1 class="text-center mb-5">Alertas e Notícias</h1>
+    
+    <h1 class="text-center mb-4">Alertas e Informações</h1>
+    
+    <p class="lead text-center mb-5">
+        Seja Bem-Vindo(a) ao CiberInfos! Em um mundo cada vez mais digital, a informação é a sua melhor defesa.
+        O CiberInfos nasceu com a missão de capacitar você com o conhecimento necessário para navegar na internet com segurança.
+        Aqui, transformamos alertas complexos em informações claras.
+        Explore os alertas abaixo e comece hoje mesmo a construir sua segurança digital!
+    </p>
+    <div class="cards-container shadow-sm">
+        
+        <div class="row text-center">
 
-    <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <a href="alerta-golpe-pix.html" class="text-decoration-none text-dark d-block">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-bell"></i>
+                        <h2 class="h5 mt-2">News</h2>
+                    </div>
+                </a>
+            </div>
 
-        <div class="col-md-4 mb-4">
-            <a href="alerta-golpe-pix.html" class="text-decoration-none text-dark d-block">
-                <div class="icon-box">
-                    <i class="fa-solid fa-money-bill-transfer"></i>
-                    <h2 class="h5 mt-2">Golpe do Pix no WhatsApp</h2>
-                </div>
-            </a>
-        </div>
+            <div class="col-md-3 mb-4">
+                <a href="alerta-falso-suporte.html" class="text-decoration-none text-dark d-block">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h2 class="h5 mt-2">Boas Práticas</h2>
+                    </div>
+                </a>
+            </div>
 
-        <div class="col-md-4 mb-4">
-            <a href="alerta-falso-suporte.html" class="text-decoration-none text-dark d-block">
-                <div class="icon-box">
-                    <i class="fa-solid fa-headset"></i>
-                    <h2 class="h5 mt-2">Falso Suporte do Telegram</h2>
-                </div>
-            </a>
-        </div>
+            <div class="col-md-3 mb-4">
+                <a href="alerta-falso-rastreamento.html" class="text-decoration-none text-dark d-block">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-user-lock"></i>
+                        <h2 class="h5 mt-2">LGPD Pessoas Físicas</h2>
+                    </div>
+                </a>
+            </div>
 
-        <div class="col-md-4 mb-4">
-            <a href="alerta-falso-rastreamento.html" class="text-decoration-none text-dark d-block">
-                <div class="icon-box">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <h2 class="h5 mt-2">Golpe do Falso Rastreamento</h2>
-                </div>
-            </a>
-        </div>
+            <div class="col-md-3 mb-4">
+                <a href="#" class="text-decoration-none text-dark d-block">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <h2 class="h5 mt-2">LGPD Pessoas Jurídicas</h2>
+                    </div>
+                </a>
+            </div>
 
-    </div> </div>
+        </div> </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -124,7 +141,7 @@
     // Link para a página atual, garantindo a URL base
     const siteURL = window.location.origin + window.location.pathname;
 
-    // 1. Funcionalidade Copiar Link do Site
+    // Funcionalidade Copiar Link do Site (o novo botão Compartilhar)
     document.getElementById('offcanvas-share-link').addEventListener('click', () => {
         navigator.clipboard.writeText(siteURL)
             .then(() => {
@@ -135,15 +152,6 @@
                 alert('Não foi possível copiar o link. Copie manualmente: ' + siteURL);
             });
     });
-
-    // 2. Configurar links de Redes Sociais
-    // Você deve substituir estas URLs genéricas pelos seus links reais.
-    const instagramLink = "https://www.instagram.com/seu-ciberinfos-perfil";
-    const linkedinLink = "https://www.linkedin.com/company/seu-ciberinfos-perfil";
-
-    document.getElementById('offcanvas-instagram').setAttribute('href', instagramLink);
-    document.getElementById('offcanvas-linkedin').setAttribute('href', linkedinLink);
-
 </script>
 
 </body>
