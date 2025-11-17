@@ -98,3 +98,95 @@
                         <li><button class="dropdown-item" id="share-site-link">Link do Site</button></li>
                     </ul>
                 </li>
+                
+                <li class="nav-item nav-separator">
+                    <a class="nav-link" href="boas-praticas.html">Membros</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container py-5">
+    
+    <h1 class="text-center mb-4">Seja Bem-Vindo(a) ao CiberInfos!</h1>
+    
+    <p class="lead text-center mb-5">
+        Em um mundo cada vez mais digital, a informação é a sua melhor defesa.
+        O CiberInfos nasceu com a missão de capacitar você com o conhecimento necessário para navegar na internet com segurança.
+        Aqui, transformamos alertas complexos em informações claras.
+        Explore os alertas abaixo e comece hoje mesmo a construir sua segurança digital!
+    </p>
+    <div class="cards-container shadow-sm">
+        
+        <div class="row text-center">
+
+            <div class="col-md-3 mb-4">
+                <a href="alerta-golpe-pix.html" class="text-decoration-none text-dark d-block">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-bell"></i>
+                        <h2 class="h5 mt-2">News</h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <a href="alerta-falso-suporte.html" class="text-decoration-none text-dark d-block">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h2 class="h5 mt-2">Boas Práticas</h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <a href="alerta-falso-rastreamento.html" class="text-decoration-none text-dark d-block">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-user-lock"></i>
+                        <h2 class="h5 mt-2">LGPD Pessoas Físicas</h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <a href="#" class="text-decoration-none text-dark d-block">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <h2 class="h5 mt-2">LGPD Pessoas Jurídicas</h2>
+                    </div>
+                </a>
+            </div>
+
+        </div> </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Link base para compartilhamento
+    const siteURL = window.location.origin + window.location.pathname;
+    
+    // 1. Funcionalidade Copiar Link do Site (Botão "Link do Site")
+    document.getElementById('share-site-link').addEventListener('click', () => {
+        navigator.clipboard.writeText(siteURL)
+            .then(() => {
+                alert('Link do site copiado para a área de transferência!');
+            })
+            .catch(err => {
+                console.error('Erro ao copiar: ', err);
+                alert('Não foi possível copiar o link. Copie manualmente: ' + siteURL);
+            });
+    });
+
+    // 2. Configurar links de Redes Sociais no Dropdown
+    // ATENÇÃO: SUBSTITUA ESTAS URLs GENÉRICAS PELOS SEUS LINKS REAIS
+    const instagramLink = "https://www.instagram.com/seu-ciberinfos-perfil";
+    const linkedinLink = "https://www.linkedin.com/company/seu-ciberinfos-perfil";
+
+    document.getElementById('share-instagram').setAttribute('href', instagramLink);
+    document.getElementById('share-linkedin').setAttribute('href', linkedinLink);
+
+</script>
+
+</body>
+</html>
