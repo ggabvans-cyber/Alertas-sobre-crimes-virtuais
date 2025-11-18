@@ -96,7 +96,7 @@
                 </li>
                 
                 <li class="nav-item nav-separator">
-                    <a class="nav-link" href="boas-praticas.html">Membros</a>
+                    <a class="nav-link" href="boas-praticas.html">Boas Práticas</a>
                 </li>
 
             </ul>
@@ -110,9 +110,10 @@
 
     <p class="lead text-center mb-5">
         Navegar no mundo digital exige conhecimento. O CiberInfos foi criado com o intuito de te informar sobre a segurança online.
+        <br>
         Aqui, você encontra o que realmente importa:
         <br>
-        <strong>Alertas de Crimes Virtuais</strong>, as <strong>Últimas Notícias</strong>, <strong>Boas Práticas</strong> e conteúdos sobre <strong>LGPD</strong>.
+        Conteúdos sobre <strong>LGPD</strong>, <strong>Alertas de Crimes Virtuais</strong>, as <strong>Últimas Notícias</strong> e <strong>Boas Práticas</strong>.
         <br>
         Informe-se, proteja-se e mantenha-se atualizado(a).
     </p>
@@ -123,7 +124,7 @@
                 <a href="alerta-golpe-pix.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-bell"></i>
-                        <h2 class="h5 mt-2">News</h2>
+                        <h2 class="h5 mt-2">Notícias</h2>
                     </div>
                 </a>
             </div>
@@ -168,7 +169,7 @@
     document.getElementById('share-site-link').addEventListener('click', () => {
         navigator.clipboard.writeText(siteURL)
             .then(() => {
-                alert('Link do site copiado para a área de transferência!');
+                alert('Link do site copiado com sucesso!');
             })
             .catch(err => {
                 console.error('Erro ao copiar: ', err);
@@ -177,8 +178,8 @@
     });
 
     // Substitua esses links pelos reais das suas redes
-    const instagramLink = "https://www.instagram.com/seu-ciberinfos-perfil";
-    const linkedinLink = "https://www.linkedin.com/company/seu-ciberinfos-perfil";
+    const instagramLink = "https://www.instagram.com/ciberinfos?igsh=MW15Mmx4YWtsd3l0&utm_source=qr";
+    const linkedinLink = "https://www.linkedin.com/in/ciber-infos-101846399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app";
 
     document.getElementById('share-instagram').setAttribute('href', instagramLink);
     document.getElementById('share-linkedin').setAttribute('href', linkedinLink);
@@ -186,6 +187,7 @@
 
 </body>
 </html>
+
 
 
 
