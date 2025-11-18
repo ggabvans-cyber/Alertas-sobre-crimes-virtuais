@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CiberInfos - LGPD Pessoa Jurídica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        .navbar-custom {
+            background-color: #0b0037 !important;
+        }
+
+        .cards-container {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 30px 15px;
+        }
+
+        .nav-separator {
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            padding-left: 1rem;
+            margin-left: 0.5rem;
+        }
+
+        .content-card {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 25px;
+        }
+
+        .btn-voltar {
+            background-color: #0b0037;
+            color: white;
+        }
+
+        .btn-voltar:hover {
+            background-color: #2b1a78;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">CiberInfos</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Início</a>
+                </li>
+
+                <li class="nav-item nav-separator">
+                    <a class="nav-link" href="sobre.html">Sobre</a>
+                </li>
+
+                <li class="nav-item dropdown nav-separator">
+                    <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">
+                        LGPD
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="lgpd_fisica.html">Pessoa Física</a></li>
+                        <li><a class="dropdown-item active" href="lgpd_juridica.html">Pessoa Jurídica</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown nav-separator">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Compartilhar</a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#" id="share-instagram">Instagram</a></li>
+                        <li><a class="dropdown-item" href="#" id="share-linkedin">LinkedIn</a></li>
+                        <li><button class="dropdown-item" id="share-site-link">Link do Site</button></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-separator">
+                    <a class="nav-link" href="boas-praticas.html">Membros</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <h1 class="text-center mb-4">LGPD para Pessoas Jurídicas</h1>
+
+    <div class="content-card shadow-sm">
+
+        <p class="lead">
+            A Lei Geral de Proteção de Dados (LGPD), sancionada em 2018, trouxe profundas mudanças para as empresas brasileiras, 
+            que agora têm obrigações claras sobre o tratamento, armazenamento e descarte de dados pessoais. 
+            Para além da adequação técnica, a LGPD busca fortalecer a responsabilidade das organizações e proteger a privacidade dos cidadãos.
+        </p>
+
+        <h4 class="mt-4">O que muda para as empresas?</h4>
+        <p>
+            A LGPD exige que toda pessoa jurídica — seja empresa, associação ou organização — trate dados pessoais com 
+            transparência, segurança e finalidade legítima. Isso significa que qualquer dado coletado de clientes, colaboradores 
+            ou parceiros deve ter um propósito claro e explícito, além de ser armazenado de forma segura.
+        </p>
+
+        <h4 class="mt-4">Interpretação e responsabilidade</h4>
+        <p>
+            A dúvida mais comum entre gestores é: “Como minha empresa deve aplicar corretamente a LGPD?”. 
+            A resposta envolve compreender que a lei não busca punir indiscriminadamente, mas sim orientar para que o tratamento 
+            de dados seja feito de maneira ética e segura.
+        </p>
+        <p>
+            Implementar políticas internas, registrar operações de tratamento, capacitar colaboradores e investir em segurança 
+            da informação são passos fundamentais.
+        </p>
+
+        <h4 class="mt-4">Importância da conscientização</h4>
+        <p>
+            Nosso projeto tem como objetivo trazer conhecimento sobre a LGPD e alertar sobre práticas inseguras que ainda são 
+            comuns no ambiente corporativo. Ao fortalecer a cultura de segurança digital no setor empresarial, reduzimos a 
+            exposição a crimes virtuais e incidentes que podem resultar em prejuízos financeiros, reputacionais e jurídicos.
+        </p>
+
+        <h4 class="mt-4">Responsabilidade Digital nas Empresas</h4>
+        <p>
+            A responsabilidade digital vai além do cumprimento da lei. 
+            Envolve criar uma cultura organizacional que valorize a proteção de dados em todos os níveis, garantindo que 
+            colaboradores compreendam a importância de seguir boas práticas, como:
+        </p>
+
+        <ul>
+            <li>evitar o descarte incorreto de documentos;</li>
+            <li>não compartilhar dados sensíveis sem necessidade;</li>
+            <li>reconhecer tentativas de engenharia social;</li>
+            <li>utilizar sistemas seguros e atualizados.</li>
+        </ul>
+
+        <p>
+            Quando empresas reforçam essas práticas, contribuem para a redução de crimes virtuais e criam relações mais seguras 
+            com clientes e parceiros.
+        </p>
+
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-voltar px-4">Voltar</a>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const siteURL = window.location.origin + window.location.pathname;
+
+    document.getElementById('share-site-link').addEventListener('click', () => {
+        navigator.clipboard.writeText(siteURL)
+            .then(() => alert('Link do site copiado para a área de transferência!'))
+            .catch(() => alert('Não foi possível copiar o link.'));
+    });
+
+    const instagramLink = "https://www.instagram.com/seu-ciberinfos-perfil";
+    const linkedinLink = "https://www.linkedin.com/company/seu-ciberinfos-perfil";
+
+    document.getElementById('share-instagram').setAttribute('href', instagramLink);
+    document.getElementById('share-linkedin').setAttribute('href', linkedinLink);
+</script>
+
+</body>
+</html>
+

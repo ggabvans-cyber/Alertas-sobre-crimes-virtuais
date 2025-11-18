@@ -1,73 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sobre - CiberInfos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link 
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-      rel="stylesheet">
+    <!-- ESTILOS IGUAIS AO INDEX -->
+    <style>
+        .navbar-custom { background-color: #0b0037 !important; }
+        .nav-separator {
+            border-left: 1px solid rgba(255,255,255,0.5);
+            padding-left: 1rem;
+            margin-left: 0.5rem;
+        }
+        body { background-color: #f8f9fa; }
+    </style>
 </head>
-<body>
+<body class="bg-light">
 
-    <nav class="navbar navbar-dark bg-dark">
-  <div class="container d-flex justify-content-between align-items-center">
-    
-    <!-- Lado esquerdo -->
-    <a class="navbar-brand fw-bold" href="index.html">CiberCrimes</a>
+<!-- NAVBAR COMPLETA (COM O "SOBRE" ATIVO) -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">CiberInfos</a>
 
-    <!-- Lado direito -->
-    <div class="d-flex align-items-center">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Instagram -->
-      <a class="nav-link text-white me-3" id="navbar-instagram" href="#" target="_blank">
-        Instagram
-      </a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
 
-      <!-- LinkedIn -->
-      <a class="nav-link text-white me-3" id="navbar-linkedin" href="#" target="_blank">
-        LinkedIn
-      </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Início</a>
+                </li>
 
-      <!-- Compartilhar -->
-      <button class="btn btn-outline-light btn-sm" id="btn-share-top">Compartilhar</button>
+                <li class="nav-item nav-separator">
+                    <a class="nav-link active" href="sobre.html">Sobre</a>
+                </li>
 
+                <li class="nav-item dropdown nav-separator">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        LGPD
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="lgpd_fisica.html">Pessoa Física</a></li>
+                        <li><a class="dropdown-item" href="lgpd_juridica.html">Pessoa Jurídica</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown nav-separator">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Compartilhar</a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#" id="share-instagram">Instagram</a></li>
+                        <li><a class="dropdown-item" href="#" id="share-linkedin">LinkedIn</a></li>
+                        <li><button class="dropdown-item" id="share-site-link">Link do Site</button></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-separator">
+                    <a class="nav-link" href="boas-praticas.html">Membros</a>
+                </li>
+
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
-<!-- NAVBAR CINZA -->
-<nav class="navbar navbar-light" style="background-color: #e4e4e4;">
-  <div class="container d-flex justify-content-center">
+<!-- CONTEÚDO PRINCIPAL -->
+<div class="container py-5">
+    <h1 class="text-center mb-4">Sobre o Projeto CiberInfos</h1>
 
-    <ul class="navbar-nav flex-row">
+    <p class="lead text-center mb-5">
+        O CiberInfos é um projeto criado por estudantes da <strong>Faculdade de Tecnologia de Jundiaí – Fatec Deputado Ary Fossen</strong>,
+        com o objetivo de tornar o conhecimento sobre segurança digital mais acessível para toda a população.
+    </p>
 
-      <li class="nav-item mx-3">
-        <a class="nav-link" href="index.html">Início</a>
-      </li>
-
-      <li class="nav-item mx-3">
-        <a class="nav-link" href="boas-praticas.html">Boas Práticas</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="sobre.html"> Sobre</a>
-      </li>
-
-    </ul>
-
-  </div>
-</nav>
-
-
-    <div class="container py-5">
-        <h1>Sobre o Projeto</h1>
+    <div class="p-4 bg-white shadow-sm rounded">
+        <h2>Quem Somos</h2>
         <p>
-            Este site tem como objetivo alertar e educar pessoas sobre crimes virtuais, golpes,
-            fraudes online e boas práticas de segurança digital.
+            Somos alunos do curso de <strong>Defesa Cibernética</strong>, apaixonados por tecnologia e pela missão de ampliar a conscientização
+            sobre segurança digital. Durante nossa trajetória acadêmica e profissional, percebemos que muitas pessoas ainda não têm acesso
+            às informações básicas que poderiam protegê-las contra golpes, ataques e vazamentos de dados.
         </p>
+
+        <h2>Nossa Motivação</h2>
+        <p>
+            A cada ano, cresce o número de crimes virtuais envolvendo engenharia social, vazamento de dados, fraudes e golpes financeiros.
+            Mesmo assim, a maior parte da população ainda conhece pouco sobre medidas simples que poderiam evitar grandes prejuízos.
+        </p>
+
+        <p>
+            Por isso criamos este espaço: um ambiente claro, objetivo e acessível, onde qualquer pessoa pode aprender como se proteger
+            e se manter informada sobre as principais ameaças do ambiente digital.
+        </p>
+
+        <h2>Missão do CiberInfos</h2>
+        <ul>
+            <li>Promover a educação digital.</li>
+            <li>Facilitar o acesso a informações críticas de segurança.</li>
+            <li>Combater a desinformação sobre crimes cibernéticos.</li>
+            <li>Conscientizar usuários sobre a importância da privacidade e da LGPD.</li>
+        </ul>
     </div>
+
+    <!-- BOTÃO VOLTAR -->
+    <a href="index.html" class="btn btn-outline-secondary mt-4">Voltar</a>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Link do site para compartilhar
+    const siteURL = window.location.origin + window.location.pathname;
+
+    document.getElementById('share-site-link')?.addEventListener('click', () => {
+        navigator.clipboard.writeText(siteURL)
+            .then(() => alert('Link copiado para a área de transferência!'))
+            .catch(() => alert('Não foi possível copiar o link.'));
+    });
+
+    // Links das redes (ajustar quando quiser)
+    document.getElementById('share-instagram').href = "#";
+    document.getElementById('share-linkedin').href = "#";
+</script>
 
 </body>
 </html>
