@@ -109,8 +109,8 @@
                         LGPD
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="alerta-falso-rastreamento.html">Pessoa Física</a></li>
-                        <li><a class="dropdown-item" href="#">Pessoa Jurídica</a></li>
+                        <li><a class="dropdown-item" href="lgpd_fisica.html">Pessoa Física</a></li>
+                        <li><a class="dropdown-item" href="lgpd_juridica.html">Pessoa Jurídica</a></li>
                     </ul>
                 </li>
                 
@@ -154,7 +154,7 @@
                     <strong>Boas Práticas</strong> para fortalecer sua proteção diária.
                     <br>
                 </p>
-                <h2 class="mb-0 fs-5 text-md-start">
+                <h2 class="mb-0 fs-6 text-md-start">
                     Mantenha-se informado(a), proteja seus dados e fique à frente das ameaças.
                 </h2>
             </div>
@@ -177,13 +177,13 @@
                 <a href="alerta-golpe-pix.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-bell"></i>
-                        <h2 class="h5 mt-2">News</h2>
+                        <h2 class="h5 mt-2">Notícias</h2>
                     </div>
                 </a>
             </div>
 
             <div class="col-md-3 mb-4">
-                <a href="alerta-falso-suporte.html" class="text-decoration-none text-dark d-block">
+                <a href="boas-praticas.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-shield-halved"></i>
                         <h2 class="h5 mt-2">Boas Práticas</h2>
@@ -192,7 +192,7 @@
             </div>
 
             <div class="col-md-3 mb-4">
-                <a href="alerta-falso-rastreamento.html" class="text-decoration-none text-dark d-block">
+                <a href="lgpd_fisica.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-user-lock"></i>
                         <h2 class="h5 mt-2">LGPD Pessoas Físicas</h2>
@@ -201,7 +201,7 @@
             </div>
 
             <div class="col-md-3 mb-4">
-                <a href="#" class="text-decoration-none text-dark d-block">
+                <a href="lgpd_juridica.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-building-columns"></i>
                         <h2 class="h5 mt-2">LGPD Pessoas Jurídicas</h2>
@@ -223,7 +223,7 @@
     document.getElementById('share-site-link').addEventListener('click', () => {
         navigator.clipboard.writeText(siteURL)
             .then(() => {
-                alert('Link do site copiado para a área de transferência!');
+                alert('Link do site copiado com sucesso!');
             })
             .catch(err => {
                 console.error('Erro ao copiar: ', err);
@@ -232,9 +232,8 @@
     });
 
     // 2. Configurar links de Redes Sociais no Dropdown
-    // ATENÇÃO: SUBSTITUA ESTAS URLs GENÉRICAS PELOS SEUS LINKS REAIS
-    const instagramLink = "https://www.instagram.com/seu-ciberinfos-perfil";
-    const linkedinLink = "https://www.linkedin.com/company/seu-ciberinfos-perfil";
+    const instagramLink = "https://www.instagram.com/ciberinfos?igsh=MW15Mmx4YWtsd3l0&utm_source=qr";
+    const linkedinLink = "https://www.linkedin.com/in/ciber-infos-101846399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app";
 
     document.getElementById('share-instagram').setAttribute('href', instagramLink);
     document.getElementById('share-linkedin').setAttribute('href', linkedinLink);
@@ -243,6 +242,7 @@
 
 </body>
 </html>
+
 
 
 
