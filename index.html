@@ -8,22 +8,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <style>
+        /* Cor de Fundo da NavBar: #0b0037 */
         .navbar-custom {
             background-color: #0b0037 !important;
         }
 
+        /* Hero Section (seção de topo) */
+        .hero-section {
+            background-color: #f8f9fa; /* Fundo cinza claro para a seção de topo */
+            padding: 80px 0; /* Espaçamento interno */
+            margin-bottom: 50px; /* Margem abaixo da seção */
+            border-bottom: 1px solid #dee2e6; /* Linha divisória inferior */
+        }
+        .hero-section h1 {
+            color: #0b0037; /* Cor do título */
+            font-size: 2.5rem; /* Tamanho do título */
+            font-weight: bold;
+        }
+        .hero-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #495057; /* Cor do texto */
+        }
+        .hero-section .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .hero-section .logo-container img {
+            max-width: 80%; /* Ajuste o tamanho da imagem da logo */
+            height: auto;
+        }
+
+        /* Container único para os cards */
         .cards-container {
             border: 1px solid #dee2e6;
             border-radius: 8px;
             padding: 30px 15px;
         }
-
+        
+        /* Estilização para a barra separadora vertical (|) */
         .nav-separator {
-            border-left: 1px solid rgba(255, 255, 255, 0.5);
-            padding-left: 1rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.5); 
+            padding-left: 1rem; 
             margin-left: 0.5rem;
         }
-
+        
+        /* Estilo dos Cards de Ícones (Cinza Claro) */
         .icon-box {
             text-align: center;
             padding: 20px;
@@ -35,15 +67,15 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f8f9fa;
+            background-color: #f8f9fa; 
         }
         .icon-box i {
-            color: #495057;
+            color: #495057; 
             font-size: 3rem;
             margin-bottom: 15px;
         }
         .icon-box:hover {
-            background-color: #e9ecef;
+            background-color: #e9ecef; 
             color: #212529 !important; 
         }
         .icon-box:hover i {
@@ -61,7 +93,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- NAVBAR: links e dropdowns -->
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
                 
@@ -73,22 +104,21 @@
                     <a class="nav-link" href="sobre.html">Sobre</a>
                 </li>
                 
-                <!-- LGPD: dropdown com os dois links funcionais -->
                 <li class="nav-item dropdown nav-separator">
-                    <a class="nav-link dropdown-toggle" href="#" id="lgpdDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         LGPD
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="lgpdDropdown">
-                        <li><a class="dropdown-item" href="lgpd_fisica.html">Pessoa Física</a></li>
-                        <li><a class="dropdown-item" href="lgpd_juridica.html">Pessoa Jurídica</a></li>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="alerta-falso-rastreamento.html">Pessoa Física</a></li>
+                        <li><a class="dropdown-item" href="#">Pessoa Jurídica</a></li>
                     </ul>
                 </li>
                 
                 <li class="nav-item dropdown nav-separator">
-                    <a class="nav-link dropdown-toggle" href="#" id="shareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Compartilhar
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="shareDropdown">
+                    <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="#" id="share-instagram" target="_blank">Instagram</a></li>
                         <li><a class="dropdown-item" href="#" id="share-linkedin" target="_blank">LinkedIn</a></li>
                         <li><button class="dropdown-item" id="share-site-link">Link do Site</button></li>
@@ -96,7 +126,7 @@
                 </li>
                 
                 <li class="nav-item nav-separator">
-                    <a class="nav-link" href="boas-praticas.html">Boas Práticas</a>
+                    <a class="nav-link" href="boas-praticas.html">Membros</a>
                 </li>
 
             </ul>
@@ -104,33 +134,55 @@
     </div>
 </nav>
 
-<div class="container py-5">
-    
-    <h1 class="text-center mb-4">Bem-Vindo(a) ao CiberInfos: Sua Defesa Digital Começa Aqui.</h1>
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-md-7 text-center text-md-start mb-4 mb-md-0">
+                <h1 class="mb-3">CiberInfos: O seu Centro de Informação Digital.</h1>
+                <p class="lead">
+                    No cenário digital em constante evolução, a informação é a sua ferramenta mais valiosa.
+                    O CiberInfos é o seu portal centralizado, criado com o propósito de mantê-lo totalmente informado sobre segurança online e privacidade.
+                    <br>
+                    Aqui, reunimos o conteúdo essencial que você precisa:
+                    <br>
+                    <strong>Alertas de Crimes Virtuais</strong> e ameaças emergentes.
+                    <br>
+                    As <strong>Últimas Notícias</strong> e tendências do setor de cibersegurança.
+                    <br>
+                    <strong>Boas Práticas</strong> para fortalecer sua proteção diária.
+                    <br>
+                    Detalhes cruciais e atualizados sobre a <strong>LGPD</strong> (Lei Geral de Proteção de Dados).
+                    <br><br>
+                    Mantenha-se informado(a), proteja seus dados e fique à frente das ameaças.
+                </p>
+            </div>
+            
+            <div class="col-md-5">
+                <div class="logo-container">
+                    <img src="ciberinfos_logo.png" alt="CiberInfos Logo" class="img-fluid">
+                </div>
+            </div>
 
-    <p class="lead text-center mb-5">
-        Navegar no mundo digital exige conhecimento. O CiberInfos foi criado com o intuito de te informar sobre a segurança online.
-        <br>
-        Aqui, você encontra o que realmente importa:
-        <br>
-        Conteúdos sobre <strong>LGPD</strong>, <strong>Alertas de Crimes Virtuais</strong>, as <strong>Últimas Notícias</strong> e <strong>Boas Práticas</strong>.
-        <br>
-        Informe-se, proteja-se e mantenha-se atualizado(a).
-    </p>
+        </div>
+    </div>
+</section>
+<div class="container py-5">
     <div class="cards-container shadow-sm">
+        
         <div class="row text-center">
 
             <div class="col-md-3 mb-4">
                 <a href="alerta-golpe-pix.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-bell"></i>
-                        <h2 class="h5 mt-2">Notícias</h2>
+                        <h2 class="h5 mt-2">News</h2>
                     </div>
                 </a>
             </div>
 
             <div class="col-md-3 mb-4">
-                <a href="boas-praticas.html" class="text-decoration-none text-dark d-block">
+                <a href="alerta-falso-suporte.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-shield-halved"></i>
                         <h2 class="h5 mt-2">Boas Práticas</h2>
@@ -139,7 +191,7 @@
             </div>
 
             <div class="col-md-3 mb-4">
-                <a href="lgpd_fisica.html" class="text-decoration-none text-dark d-block">
+                <a href="alerta-falso-rastreamento.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-user-lock"></i>
                         <h2 class="h5 mt-2">LGPD Pessoas Físicas</h2>
@@ -148,7 +200,7 @@
             </div>
 
             <div class="col-md-3 mb-4">
-                <a href="lgpd_juridica.html" class="text-decoration-none text-dark d-block">
+                <a href="#" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-building-columns"></i>
                         <h2 class="h5 mt-2">LGPD Pessoas Jurídicas</h2>
@@ -156,7 +208,7 @@
                 </a>
             </div>
 
-        </div>
+        </div> 
     </div>
 </div>
 
@@ -166,10 +218,11 @@
     // Link base para compartilhamento
     const siteURL = window.location.origin + window.location.pathname;
     
+    // 1. Funcionalidade Copiar Link do Site (Botão "Link do Site")
     document.getElementById('share-site-link').addEventListener('click', () => {
         navigator.clipboard.writeText(siteURL)
             .then(() => {
-                alert('Link do site copiado com sucesso!');
+                alert('Link do site copiado para a área de transferência!');
             })
             .catch(err => {
                 console.error('Erro ao copiar: ', err);
@@ -177,18 +230,15 @@
             });
     });
 
-    // Substitua esses links pelos reais das suas redes
-    const instagramLink = "https://www.instagram.com/ciberinfos?igsh=MW15Mmx4YWtsd3l0&utm_source=qr";
-    const linkedinLink = "https://www.linkedin.com/in/ciber-infos-101846399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app";
+    // 2. Configurar links de Redes Sociais no Dropdown
+    // ATENÇÃO: SUBSTITUA ESTAS URLs GENÉRICAS PELOS SEUS LINKS REAIS
+    const instagramLink = "https://www.instagram.com/seu-ciberinfos-perfil";
+    const linkedinLink = "https://www.linkedin.com/company/seu-ciberinfos-perfil";
 
     document.getElementById('share-instagram').setAttribute('href', instagramLink);
     document.getElementById('share-linkedin').setAttribute('href', linkedinLink);
+
 </script>
 
 </body>
 </html>
-
-
-
-
-
