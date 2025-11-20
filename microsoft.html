@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Microsoft – CiberInfos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        .navbar-custom { background-color: #0b0037 !important; }
+        .nav-separator {
+            border-left: 1px solid rgba(255,255,255,0.5);
+            padding-left: 1rem;
+            margin-left: 0.5rem;
+        }
+        body { background-color: #f8f9fa; }
+
+        .btn-voltar {
+            background-color: #0b0037;
+            color: white;
+        }
+        .btn-voltar:hover {
+            background-color: #2b1a78;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">CiberInfos</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Início</a>
+                </li>
+
+                <li class="nav-item nav-separator">
+                    <a class="nav-link" href="sobre.html">Sobre</a>
+                </li>
+
+                <li class="nav-item dropdown nav-separator">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">LGPD</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="lgpd_fisica.html">Pessoa Física</a></li>
+                        <li><a class="dropdown-item" href="lgpd_juridica.html">Pessoa Jurídica</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown nav-separator">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        Compartilhar
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" id="share-instagram" target="_blank">Instagram</a></li>
+                        <li><a class="dropdown-item" id="share-linkedin" target="_blank">LinkedIn</a></li>
+                        <li><button class="dropdown-item" id="share-site-link">Link do Site</button></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-separator">
+                    <a class="nav-link" href="boas-praticas.html">Boas Práticas</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<div class="container py-5">
+    <h1 class="text-center mb-4 ciber-title fs-2">Microsoft mitiga ataque DDoS recorde de 15,72 Tbps</h1>
+
+    <div class="p-4 bg-white shadow-sm rounded">
+
+        <p>
+            A Microsoft informou que mitigou com sucesso o maior ataque de negação de serviço distribuído (DDoS) já registrado em ambiente de nuvem, atingindo o pico impressionante de <strong>15,72 terabits por segundo (Tbps)</strong>. 
+            O alvo foi um único cliente hospedado na Azure, localizado na Austrália, e a mitigação ocorreu sem impacto percebido na disponibilidade do serviço.
+        </p>
+
+        <p>
+            Além do volume extremo em Tbps, o ataque alcançou também <strong>3,64 bilhões de pacotes por segundo (pps)</strong>, tornando-se uma das ofensivas mais agressivas já observadas em termos de taxa de requisições.
+        </p>
+
+        <h3>Origem do Ataque</h3>
+        <p>
+            A atividade maliciosa foi atribuída à botnet <strong>Aisuru</strong>, composta por mais de 500 mil endereços IP distribuídos globalmente.
+            A botnet é formada principalmente por dispositivos de Internet das Coisas (IoT) comprometidos, como roteadores, câmeras IP e sistemas DVR.
+        </p>
+
+        <p>
+            O constante avanço na capacidade de largura de banda desses dispositivos aumenta a capacidade destrutiva das botnets,
+            tornando ataques desse tipo mais difíceis de mitigar utilizando soluções tradicionais.
+        </p>
+
+        <h3>Como a Microsoft Conteve o Ataque</h3>
+        <p>
+            A mitigação foi realizada automaticamente pelos sistemas de defesa da <strong>plataforma Microsoft Azure</strong>,
+            que emprega detecção avançada, filtragem inteligente e controle de tráfego em tempo real.
+        </p>
+
+        <p>
+            O sucesso reforça a importância da automação, escalabilidade e arquiteturas resilientes
+            para a proteção de serviços críticos na nuvem.
+        </p>
+
+        <h3>Consequências e Alerta ao Mercado</h3>
+        <p>
+            Embora o ataque tenha sido completamente contido, o episódio serve como alerta para todas as organizações que dependem da nuvem.
+            Ataques DDoS continuam crescendo não apenas em frequência, mas também em volume e sofisticação.
+        </p>
+
+        <p>
+            A tendência, segundo a Microsoft, é que estes ataques se tornem cada vez mais comuns
+            conforme mais dispositivos vulneráveis são incorporados ao ecossistema digital sem as medidas mínimas de segurança.
+        </p>
+
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="noticias.html" class="btn btn-voltar px-4">Voltar</a>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const siteURL = window.location.origin + window.location.pathname;
+
+    document.getElementById('share-site-link').addEventListener('click', () => {
+        navigator.clipboard.writeText(siteURL)
+            .then(() => alert('Link copiado com sucesso!'));
+    });
+
+    document.getElementById('share-instagram').href =
+        "https://www.instagram.com/ciberinfos?igsh=MW15Mmx4YWtsd3l0&utm_source=qr";
+
+    document.getElementById('share-linkedin').href =
+        "https://www.linkedin.com/in/ciber-infos-101846399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app";
+</script>
+
+</body>
+</html>
