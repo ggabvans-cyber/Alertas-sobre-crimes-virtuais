@@ -30,12 +30,15 @@
             border-radius: 8px;
             padding: 25px;
         }
-
+        .ciber-title {
+            color: #0b0037 !important; 
+            font-weight: bold;
+            font-size: 3rem !important;
+        }
         .btn-voltar {
             background-color: #0b0037;
             color: white;
         }
-
         .btn-voltar:hover {
             background-color: #2b1a78;
             color: white;
@@ -74,14 +77,15 @@
                 </li>
 
                 <li class="nav-item dropdown nav-separator">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Compartilhar</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Compartilhar
+                    </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#" id="share-instagram">Instagram</a></li>
-                        <li><a class="dropdown-item" href="#" id="share-linkedin">LinkedIn</a></li>
+                        <li><a class="dropdown-item" href="#" id="share-instagram" target="_blank">Instagram</a></li>
+                        <li><a class="dropdown-item" href="#" id="share-linkedin" target="_blank">LinkedIn</a></li>
                         <li><button class="dropdown-item" id="share-site-link">Link do Site</button></li>
                     </ul>
                 </li>
-
                 <li class="nav-item nav-separator">
                     <a class="nav-link" href="boas-praticas.html">Boas Práticas</a>
                 </li>
@@ -92,17 +96,16 @@
 </nav>
 
 <div class="container py-5">
-    <h1 class="text-center mb-4">LGPD para Pessoas Físicas</h1>
+    <h1 class="text-center mb-3 ciber-title fs-2">LGPD para Pessoas Físicas</h1>
 
-    <div class="content-card shadow-sm">
-
-        <p class="lead">
-            A Lei Geral de Proteção de Dados (LGPD), criada em 2018, surgiu para garantir mais segurança, 
-            transparência e controle sobre os dados pessoais de todos os cidadãos. 
-            Em um mundo cada vez mais digital, entender como seus dados são coletados, usados e armazenados tornou-se essencial.
-        </p>
-
-        <h4 class="mt-4">Por que a LGPD importa para você?</h4>
+    <p class="lead text-center mb-3">
+        A Lei Geral de Proteção de Dados (LGPD), criada em 2018, surgiu para garantir mais segurança, transparência e controle 
+        <br>
+        sobre os dados pessoais de todos os cidadãos. Em um mundo cada vez mais digital, entender como seus dados são coletados, usados e armazenados tornou-se essencial.
+    </p>
+    
+    <div class="p-4 bg-white shadow-sm rounded">
+        <h4 class="mt-3">Por que a LGPD importa para você?</h4>
         <p>
             Todos nós compartilhamos informações diariamente: CPF, endereço, número de telefone, histórico de navegação, 
             localização e até preferências pessoais. Muitas vezes sem perceber.  
@@ -110,18 +113,18 @@
             possa tratá-las de forma abusiva ou insegura.
         </p>
 
-        <h4 class="mt-4">Seus direitos como titular de dados</h4>
+        <h4 class="mt-3">Seus direitos como titular de dados</h4>
         <p>
             A LGPD garante que qualquer pessoa física tenha direitos claros sobre o próprio dado. 
             Entre os principais estão:
         </p>
 
         <ul>
-            <li>o direito de saber que dados estão sendo coletados;</li>
-            <li>o direito de solicitar a exclusão dessas informações;</li>
-            <li>o direito de corrigir dados incorretos;</li>
-            <li>o direito de negar o compartilhamento indevido dos seus dados;</li>
-            <li>o direito de exigir segurança em todo o processo de tratamento.</li>
+            <li>O direito de saber que dados estão sendo coletados;</li>
+            <li>O direito de solicitar a exclusão dessas informações;</li>
+            <li>O direito de corrigir dados incorretos;</li>
+            <li>O direito de negar o compartilhamento indevido dos seus dados;</li>
+            <li>O direito de exigir segurança em todo o processo de tratamento.</li>
         </ul>
 
         <h4 class="mt-4">Como interpretar a LGPD no seu dia a dia?</h4>
@@ -136,7 +139,7 @@
             afetar sua vida financeira e até sua segurança pessoal.
         </p>
 
-        <h4 class="mt-4">Conscientização contra crimes virtuais</h4>
+        <h4 class="mt-3">Conscientização contra crimes virtuais</h4>
         <p>
             Nosso objetivo é trazer conhecimento acessível sobre a LGPD e alertar sobre crimes virtuais 
             que se aproveitam da falta de informação. 
@@ -149,18 +152,18 @@
             sua exposição a fraudes, golpes e vazamentos.
         </p>
 
-        <h4 class="mt-4">Construindo responsabilidade digital</h4>
+        <h4 class="mt-3">Construindo responsabilidade digital</h4>
         <p>
             A responsabilidade digital significa assumir controle sobre suas informações.  
             Isso envolve atitudes como:
         </p>
 
         <ul>
-            <li>evitar fornecer dados sem necessidade;</li>
-            <li>verificar a legitimidade de sites e aplicativos;</li>
-            <li>entender políticas de privacidade de forma crítica;</li>
-            <li>utilizar autenticação forte e proteger senhas;</li>
-            <li>ficar atento a mensagens suspeitas e golpes em redes sociais.</li>
+            <li>Evitar fornecer dados sem necessidade;</li>
+            <li>Verificar a legitimidade de sites e aplicativos;</li>
+            <li>Entender políticas de privacidade de forma crítica;</li>
+            <li>Utilizar autenticação forte e proteger senhas;</li>
+            <li>Ficar atento a mensagens suspeitas e golpes em redes sociais.</li>
         </ul>
 
         <div class="text-center mt-4">
@@ -172,21 +175,29 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+    // Link base para compartilhamento
     const siteURL = window.location.origin + window.location.pathname;
-
+    
+    // 1. Funcionalidade Copiar Link do Site (Botão "Link do Site")
     document.getElementById('share-site-link').addEventListener('click', () => {
         navigator.clipboard.writeText(siteURL)
-            .then(() => alert('Link do site copiado para a área de transferência!'))
-            .catch(() => alert('Não foi possível copiar o link.'));
+            .then(() => {
+                alert('Link do site copiado com sucesso!');
+            })
+            .catch(err => {
+                console.error('Erro ao copiar: ', err);
+                alert('Não foi possível copiar o link. Copie manualmente: ' + siteURL);
+            });
     });
 
-    const instagramLink = "https://www.instagram.com/seu-ciberinfos-perfil";
-    const linkedinLink = "https://www.linkedin.com/company/seu-ciberinfos-perfil";
+    // 2. Configurar links de Redes Sociais no Dropdown
+    const instagramLink = "https://www.instagram.com/ciberinfos?igsh=MW15Mmx4YWtsd3l0&utm_source=qr";
+    const linkedinLink = "https://www.linkedin.com/in/ciber-infos-101846399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app";
 
     document.getElementById('share-instagram').setAttribute('href', instagramLink);
     document.getElementById('share-linkedin').setAttribute('href', linkedinLink);
-</script>
 
+</script>
 </body>
 </html>
 

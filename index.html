@@ -17,8 +17,7 @@
         .hero-section {
             background-color: #f8f9fa; /* Fundo cinza claro para a seção de topo */
             padding: 80px 0; /* Espaçamento interno */
-            margin-bottom: 50px; /* Margem abaixo da seção */
-            border-bottom: 1px solid #dee2e6; /* Linha divisória inferior */
+            margin-bottom: 20px; /* Margem abaixo da seção */
         }
         .hero-section h1 {
             color: #0b0037; /* Cor do título */
@@ -28,7 +27,7 @@
         .hero-section p {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #495057; /* Cor do texto */
+            color: #2f3337; /* Cor do texto */
         }
         .hero-section .logo-container {
             display: flex;
@@ -37,14 +36,12 @@
             height: 100%;
         }
         .hero-section .logo-container img {
-            max-width: 80%; /* Ajuste o tamanho da imagem da logo */
+            max-width: 50%; /* Ajuste o tamanho da imagem da logo */
             height: auto;
         }
 
         /* Container único para os cards */
         .cards-container {
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
             padding: 30px 15px;
         }
         
@@ -59,7 +56,7 @@
         .icon-box {
             text-align: center;
             padding: 20px;
-            border: 1px solid #f8f9fa; 
+            border: 1px solid #e9ecef; 
             border-radius: 5px;
             transition: all 0.3s;
             height: 100%; 
@@ -67,19 +64,25 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f8f9fa; 
+            background-color: #f8f9fa;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05); /* Sombra suave */            
         }
         .icon-box i {
-            color: #495057; 
-            font-size: 3rem;
+            color: #0b0037; 
+            font-size: 3.5rem;
             margin-bottom: 15px;
         }
         .icon-box:hover {
-            background-color: #e9ecef; 
-            color: #212529 !important; 
+            background-color: #f0f8ff; 
+            color: #212529 !important;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Efeito de flutuação */
+            text-decoration: none;
         }
         .icon-box:hover i {
-            color: #212529;
+            color: #0b0037; 
+        }
+        .icon-box:hover h2 {
+             color: #0b0037; 
         }
     </style>
 </head>
@@ -109,8 +112,8 @@
                         LGPD
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="alerta-falso-rastreamento.html">Pessoa Física</a></li>
-                        <li><a class="dropdown-item" href="#">Pessoa Jurídica</a></li>
+                        <li><a class="dropdown-item" href="lgpd_fisica.html">Pessoa Física</a></li>
+                        <li><a class="dropdown-item" href="lgpd_juridica.html">Pessoa Jurídica</a></li>
                     </ul>
                 </li>
                 
@@ -126,7 +129,7 @@
                 </li>
                 
                 <li class="nav-item nav-separator">
-                    <a class="nav-link" href="boas-praticas.html">Membros</a>
+                    <a class="nav-link" href="boas-praticas.html">Boas Práticas</a>
                 </li>
 
             </ul>
@@ -139,50 +142,48 @@
         <div class="row align-items-center">
             
             <div class="col-md-7 text-center text-md-start mb-4 mb-md-0">
-                <h1 class="mb-3">CiberInfos: O seu Centro de Informação Digital.</h1>
-                <p class="lead">
-                    No cenário digital em constante evolução, a informação é a sua ferramenta mais valiosa.
+                <h1 class="mb-3">Bem-Vindo(a) ao CiberInfos: 
+                    <br>
+                    Sua Defesa Digital Começa Aqui.
+                </h1>
+                <p class="lead mb-4">
+                    Navegar no mundo digital exige conhecimento e o CiberInfos foi criado com o intuito de te informar sobre a segurança online.
                     O CiberInfos é o seu portal centralizado, criado com o propósito de mantê-lo totalmente informado sobre segurança online e privacidade.
                     <br>
                     Aqui, reunimos o conteúdo essencial que você precisa:
                     <br>
-                    <strong>Alertas de Crimes Virtuais</strong> e ameaças emergentes.
-                    <br>
-                    As <strong>Últimas Notícias</strong> e tendências do setor de cibersegurança.
+                    Conteúdos sobre <strong>LGPD</strong>, <strong>Alertas de Crimes Virtuais</strong>, as <strong>Últimas Notícias</strong> e
                     <br>
                     <strong>Boas Práticas</strong> para fortalecer sua proteção diária.
                     <br>
-                    Detalhes cruciais e atualizados sobre a <strong>LGPD</strong> (Lei Geral de Proteção de Dados).
-                    <br><br>
-                    Mantenha-se informado(a), proteja seus dados e fique à frente das ameaças.
                 </p>
+                <h2 class="mb-0 fs-6 text-md-start">
+                    Mantenha-se informado(a), proteja seus dados e fique à frente das ameaças.
+                </h2>
             </div>
             
             <div class="col-md-5">
                 <div class="logo-container">
-                    <img src="ciberinfos_logo.png" alt="CiberInfos Logo" class="img-fluid">
-                </div>
+                  <img src="logo_ciberinfos.png" alt="CiberInfos Logo" class="img-fluid" id="hero-logo">
             </div>
-
+    </div>
         </div>
     </div>
 </section>
-<div class="container py-5">
-    <div class="cards-container shadow-sm">
-        
+<div class="cards-container">        
         <div class="row text-center">
 
             <div class="col-md-3 mb-4">
-                <a href="alerta-golpe-pix.html" class="text-decoration-none text-dark d-block">
+                <a href="noticias.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-bell"></i>
-                        <h2 class="h5 mt-2">News</h2>
+                        <h2 class="h5 mt-2">Notícias</h2>
                     </div>
                 </a>
             </div>
 
             <div class="col-md-3 mb-4">
-                <a href="alerta-falso-suporte.html" class="text-decoration-none text-dark d-block">
+                <a href="boas-praticas.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-shield-halved"></i>
                         <h2 class="h5 mt-2">Boas Práticas</h2>
@@ -191,7 +192,7 @@
             </div>
 
             <div class="col-md-3 mb-4">
-                <a href="alerta-falso-rastreamento.html" class="text-decoration-none text-dark d-block">
+                <a href="lgpd_fisica.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-user-lock"></i>
                         <h2 class="h5 mt-2">LGPD Pessoas Físicas</h2>
@@ -200,7 +201,7 @@
             </div>
 
             <div class="col-md-3 mb-4">
-                <a href="#" class="text-decoration-none text-dark d-block">
+                <a href="lgpd_juridica.html" class="text-decoration-none text-dark d-block">
                     <div class="icon-box">
                         <i class="fa-solid fa-building-columns"></i>
                         <h2 class="h5 mt-2">LGPD Pessoas Jurídicas</h2>
@@ -222,7 +223,7 @@
     document.getElementById('share-site-link').addEventListener('click', () => {
         navigator.clipboard.writeText(siteURL)
             .then(() => {
-                alert('Link do site copiado para a área de transferência!');
+                alert('Link do site copiado com sucesso!');
             })
             .catch(err => {
                 console.error('Erro ao copiar: ', err);
@@ -231,9 +232,8 @@
     });
 
     // 2. Configurar links de Redes Sociais no Dropdown
-    // ATENÇÃO: SUBSTITUA ESTAS URLs GENÉRICAS PELOS SEUS LINKS REAIS
-    const instagramLink = "https://www.instagram.com/seu-ciberinfos-perfil";
-    const linkedinLink = "https://www.linkedin.com/company/seu-ciberinfos-perfil";
+    const instagramLink = "https://www.instagram.com/ciberinfos?igsh=MW15Mmx4YWtsd3l0&utm_source=qr";
+    const linkedinLink = "https://www.linkedin.com/in/ciber-infos-101846399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app";
 
     document.getElementById('share-instagram').setAttribute('href', instagramLink);
     document.getElementById('share-linkedin').setAttribute('href', linkedinLink);
@@ -242,3 +242,21 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

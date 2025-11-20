@@ -3,26 +3,66 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Boas Práticas - CiberInfos</title>
+    <title>Notícias - CiberInfos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
+        /* Mantém a estética da página principal */
         .navbar-custom {
             background-color: #0b0037 !important;
         }
         .content-box {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
             border: 1px solid #dee2e6;
-            margin-top: 40px;
+            border-radius: 8px;
+            padding: 30px;
+            background-color: #ffffff;
         }
+    </style>
+</head>
+<body class="bg-light">
+
+    <style>
+        .navbar-custom {
+            background-color: #0b0037 !important;
+        }
+
+        .cards-container {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 30px 15px;
+        }
+
         .nav-separator {
             border-left: 1px solid rgba(255, 255, 255, 0.5);
             padding-left: 1rem;
             margin-left: 0.5rem;
+        }
+
+        .icon-box {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #f8f9fa; 
+            border-radius: 5px;
+            transition: all 0.3s;
+            height: 100%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+        .icon-box i {
+            color: #495057;
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .icon-box:hover {
+            background-color: #e9ecef;
+            color: #212529 !important; 
+        }
+        .icon-box:hover i {
+            color: #212529;
         }
         .ciber-title {
             color: #0b0037 !important; 
@@ -52,7 +92,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Início</a>
+                    <a class="nav-link active" href="index.html">Início</a>
                 </li>
                 <li class="nav-item nav-separator">
                     <a class="nav-link" href="sobre.html">Sobre</a>
@@ -61,7 +101,7 @@
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">LGPD</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="lgpd_fisica.html">Pessoa Física</a></li>
-                        <li><a class="dropdown-item" href="lgpd_juridica.html">Pessoa Jurídica</a></li>
+                        <li><a class="dropdown-item" href="lgpd_juridica">Pessoa Jurídica</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown nav-separator">
@@ -75,45 +115,52 @@
                     </ul>
                 </li>
                 <li class="nav-item nav-separator">
-                    <a class="nav-link active" href="boas-praticas.html">Boas Práticas</a>
+                    <a class="nav-link" href="boas-praticas.html">Boas Práticas</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container py-5">
-    <h1 class="text-center mb-3 ciber-title fs-2">Boas Práticas de Segurança Digital</h1>
+<!-- CONTEÚDO PRINCIPAL -->
     
-     <p class="lead text-center mb-3">
-        Aqui estão algumas recomendações essenciais para melhorar sua segurança digital no dia a dia. 
-        <br>
-        Essas práticas ajudam a reduzir riscos, evitar golpes e manter seus dados mais protegidos.</p>
+<div class="container py-5">
+    <h1 class="text-center mb-3 ciber-title fs-2">Notícias de Segurança Digital</h1>
+    
+    <p class="lead text-center mb-3">
+        Aqui você encontra atualizações importantes sobre golpes, fraudes e novidades do mundo cibernético.</p>
 
     <div class="p-4 bg-white shadow-sm rounded">
-        <h3 class="mt-3">1. Senhas Fortes e Autenticação Multifator (MFA)</h3>
-        <ul>
-            <li>Utilize uma combinação de pelo menos 12 caracteres que inclua letras maiúsculas, minúsculas, números e símbolos especiais.</li>
-            <li>Considere usar um gerenciador de senhas para criar, armazenar e gerenciar senhas complexas e exclusivas para cada conta.</li>
-        </ul>
-        
-        <h3 class="mt-3">2. Reconhecimento e Evitar Links Suspeitos (Phishing)</h3>
-        <ul>
-            <li>Desconfie de qualquer comunicação que use um tom de urgência, ameaça (ex: "Sua conta será suspensa") ou ofereça um prêmio inesperado.</li>
-            <li>Passe o mouse sobre o link (sem clicar) para ver a URL real na barra de status do seu navegador.</li>
-        </ul>
+        <!-- BLOCO 1 → microsoft.html -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h3 class="h5">Microsoft mitiga ataque DDoS recorde de 15,72 Tbps</h3>
+        <p>A Microsoft informou que mitigou com sucesso o maior ataque de negação de serviço distribuído (DDoS) já registrado em ambiente de nuvem, com um pico de...</p>
+        <p>19/11/2025</p>
+        <a href="microsoft.html" class="btn btn-primary">Ler mais</a>
+    </div>
+</div>
 
-        <h3 class="mt-3">3. Manutenção e Atualização de Softwares</h3>
-        <ul>
-            <li>Mantenha o sistema operacional (Windows, macOS, Android, iOS), navegadores (Chrome, Firefox) e todos os aplicativos instalados sempre atualizados.</li>
-            <li>Ative as atualizações automáticas para evitar esquecimentos.</li>
-        </ul>
+<!-- BLOCO 2 → akira.html -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h3 class="h5">Grupo Akira arrecada US$ 244 milhões em ataques de ransomware</h5>
+        <p>O grupo responsável pelo ransomware Akira já acumulou mais de US$ 244 milhões em pagamentos obtidos por meio de...</p>
+        <p>18/11/2025</p>
+        <a href="akira.html" class="btn btn-primary">Ler mais</a>
+    </div>
+</div>
 
-        <h3 class="mt-3">4. Segurança em Redes Wi-Fi Públicas</h3>
-        <ul>
-            <li>Evite realizar transações financeiras (banco, compras), acessar e-mails ou fazer login em qualquer serviço sensível (como redes sociais) quando estiver conectado a redes Wi-Fi públicas e não criptografadas (como as de aeroportos ou cafés).</li>
-            <li>Para proteger seu tráfego de dados nessas redes, utilize uma Rede Privada Virtual (VPN).</li>
-        </ul>
+<!-- BLOCO 3 → malware.html -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h3 class="h5">Malware DarkComet é distribuído por aplicativos fraudulentos de criptomoedas</h3>
+        <p>Uma nova campanha maliciosa está utilizando aplicativos falsos de criptomoedas para distribuir o malware DarkComet, um trojan de...</p>
+        <p>18/11/2025</p>
+        <a href="malware.html" class="btn btn-primary">Ler mais</a>
+    </div>
+</div>
+
 
         <div class="text-center mt-4">
             <a href="index.html" class="btn btn-voltar px-4">Voltar</a>
@@ -122,7 +169,6 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
     // Link base para compartilhamento
     const siteURL = window.location.origin + window.location.pathname;
@@ -147,6 +193,9 @@
     document.getElementById('share-linkedin').setAttribute('href', linkedinLink);
 
 </script>
+
 </body>
 </html>
+
+
 

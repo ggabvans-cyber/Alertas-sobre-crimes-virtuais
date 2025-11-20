@@ -6,15 +6,33 @@
     <title>Sobre - CiberInfos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- ESTILOS IGUAIS AO INDEX -->
     <style>
-        .navbar-custom { background-color: #0b0037 !important; }
-        .nav-separator {
-            border-left: 1px solid rgba(255,255,255,0.5);
-            padding-left: 1rem;
-            margin-left: 0.5rem;
-        }
-        body { background-color: #f8f9fa; }
+        
+    /* ESTILOS IGUAIS AO INDEX */
+    .navbar-custom { background-color: #0b0037 !important; }
+    .nav-separator {
+        border-left: 1px solid rgba(255,255,255,0.5);
+        padding-left: 1rem;
+        margin-left: 0.5rem;
+    }
+    body { background-color: #f8f9fa; }
+    
+    /* NOVA REGRA: Classe para títulos azuis escuros */
+    .ciber-title {
+        color: #0b0037 !important; 
+        font-weight: bold;
+        font-size: 3rem !important;
+    }
+
+    .btn-voltar {
+        background-color: #0b0037;
+        color: white;
+    }
+
+    .btn-voltar:hover {
+        background-color: #2b1a78;
+        color: white;
+    }
     </style>
 </head>
 <body class="bg-light">
@@ -52,8 +70,8 @@
                 <li class="nav-item dropdown nav-separator">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Compartilhar</a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#" id="share-instagram">Instagram</a></li>
-                        <li><a class="dropdown-item" href="#" id="share-linkedin">LinkedIn</a></li>
+                        <li><a class="dropdown-item" href="#" id="share-instagram" target="_blank">Instagram</a></li>
+                        <li><a class="dropdown-item" href="#" id="share-linkedin" target="_blank">LinkedIn</a></li>
                         <li><button class="dropdown-item" id="share-site-link">Link do Site</button></li>
                     </ul>
                 </li>
@@ -68,10 +86,11 @@
 </nav>
 
 <!-- CONTEÚDO PRINCIPAL -->
+    
 <div class="container py-5">
-    <h1 class="text-center mb-4">Sobre o Projeto CiberInfos</h1>
-
-    <p class="lead text-center mb-5">
+    <h1 class="text-center mb-3 ciber-title fs-2">Sobre o Projeto CiberInfos</h1>
+    
+    <p class="lead text-center mb-3">
         O CiberInfos é um projeto criado por estudantes da <strong>Faculdade de Tecnologia de Jundiaí – Fatec Deputado Ary Fossen</strong>,
         com o objetivo de tornar o conhecimento sobre segurança digital mais acessível para toda a população.
     </p>
@@ -102,30 +121,51 @@
             <li>Combater a desinformação sobre crimes cibernéticos.</li>
             <li>Conscientizar usuários sobre a importância da privacidade e da LGPD.</li>
         </ul>
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-voltar px-4">Voltar</a>
+        </div>
     </div>
-
-    <!-- BOTÃO VOLTAR -->
-    <a href="index.html" class="btn btn-outline-secondary mt-4">Voltar</a>
-
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    // Link do site para compartilhar
+    // Link base para compartilhamento
     const siteURL = window.location.origin + window.location.pathname;
-
-    document.getElementById('share-site-link')?.addEventListener('click', () => {
+    
+    // 1. Funcionalidade Copiar Link do Site (Botão "Link do Site")
+    document.getElementById('share-site-link').addEventListener('click', () => {
         navigator.clipboard.writeText(siteURL)
-            .then(() => alert('Link copiado para a área de transferência!'))
-            .catch(() => alert('Não foi possível copiar o link.'));
+            .then(() => {
+                alert('Link do site copiado com sucesso!');
+            })
+            .catch(err => {
+                console.error('Erro ao copiar: ', err);
+                alert('Não foi possível copiar o link. Copie manualmente: ' + siteURL);
+            });
     });
 
-    // Links das redes (ajustar quando quiser)
-    document.getElementById('share-instagram').href = "#";
-    document.getElementById('share-linkedin').href = "#";
+    const instagramLink = "https://www.instagram.com/ciberinfos?igsh=MW15Mmx4YWtsd3l0&utm_source=qr";
+    const linkedinLink = "https://www.linkedin.com/in/ciber-infos-101846399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app";
+
+    document.getElementById('share-instagram').setAttribute('href', instagramLink);
+    document.getElementById('share-linkedin').setAttribute('href', linkedinLink);
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
